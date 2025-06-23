@@ -14,3 +14,5 @@ These additional references should also help you:
 
 * [Gradle Build Scans – insights for your project's build](https://scans.gradle.com#gradle)
 
+## 코드 컨벤션
+자세한 내용은 [CONVENTION.md](./CONVENTION.md)를 참고하세요.
