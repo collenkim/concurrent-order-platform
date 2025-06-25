@@ -7,18 +7,9 @@ plugins {
 group = 'concurrent.order'
 version = '0.0.1-SNAPSHOT'
 
-bootJar.enabled = true
-jar.enabled = false
-
 java {
     toolchain {
         languageVersion = JavaLanguageVersion.of(17)
-    }
-}
-
-configurations {
-    compileOnly {
-        extendsFrom annotationProcessor
     }
 }
 
