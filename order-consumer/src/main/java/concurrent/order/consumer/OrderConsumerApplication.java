@@ -1,13 +1,13 @@
-package concurrent.order.platform;
+package concurrent.order.consumer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ConcurrentOrderPlatformApplication {
+public class OrderConsumerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(ConcurrentOrderPlatformApplication.class, args);
+        SpringApplication.run(OrderConsumerApplication.class, args);
     }
 
 }

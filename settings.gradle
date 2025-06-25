@@ -1,1 +1,3 @@
 rootProject.name = 'concurrent-order-platform'
+include 'order-api'
+include 'order-consumer'

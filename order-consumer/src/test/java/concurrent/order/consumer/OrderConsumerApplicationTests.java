@@ -1,10 +1,10 @@
-package concurrent.order.platform;
+package concurrent.order.consumer;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class ConcurrentOrderPlatformApplicationTests {
+class OrderConsumerApplicationTests {
 
     @Test
     void contextLoads() {
