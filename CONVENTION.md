@@ -50,17 +50,12 @@
 ## 7. 환경 변수
 - application-{profile}.yml 파일 사용
 - 환경별로 분리된 설정 관리
-- 예시
-  - profile:
-      env: dev
-  - order:
-      api:
-        url: ${ORDER_API_URL:http://localhost:8080}
+
 
 8. 불리언 변수 & 메서드 명명 정책
 - 변수/메서드 이름 중 boolean 형 인것은 명확하게 "조건"을 표현
 - 포함 포르: is, has, can, should, was, will
-- 부정 표현(예: isNot) 지양, 가능한 정의 포� + 부정문 현실 권장
+- 부정 표현(예: isNot) 지양, 가능한 정의 포함 + 부정문 현실 권장
 - 예시
   - 변수: `isValidUserToken`, `hasAdminRole`, `canApprove`, `isActiveUser`
   - 메서드: `isUserLoggedIn()`, `hasPermission()`, `canReserve()`, `shouldApplyCoupon()`:
