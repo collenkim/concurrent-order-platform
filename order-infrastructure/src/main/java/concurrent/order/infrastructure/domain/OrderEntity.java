@@ -1,23 +1,32 @@
 package concurrent.order.infrastructure.domain;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+import lombok.AccessLevel;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+@Getter
 @Entity
 @Table(name = "orders")
-@NoArgsConstructor
-public class OrderEntity {
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+public class OrderEntity extends BaseEntity{
 
     @Id
-    private String id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
 
-    private String productName;
+    @Column(name = "order_id")
+    private String orderId;
+
+    @ManyToOne
+    private ProductEntity product;
+
+    @Column(name = "quantity")
     private int quantity;
 
-    private OrderEntity(String id, String productName, int quantity) {
-        this.id = id;
-        this.productName = productName;
+    private OrderEntity(String orderId, ProductEntity product, int quantity) {
+        this.orderId = orderId;
+        this.product = product;
         this.quantity = quantity;
     }
 
